@@ -6,10 +6,7 @@
   "main": "index.ts",
   "license": "ISC",
   "scripts": {
-    "dev": "nodemon --watch '*.ts' --exec 'ts-node index.ts' -e ts"
-  },
-  "nodemonConfig": {
-    "verbose": true
+    "dev": "nodemon --exec 'ts-node index.ts' -w './*.ts' -e 'ts,js,json'"
   },
   "devDependencies": {
     "@types/node": "^17.0.33",
