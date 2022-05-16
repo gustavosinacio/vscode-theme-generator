@@ -12,6 +12,8 @@ export const aquaTransparent300 = "#0ff3";
 export const aquaTransparent400 = "#0ff5";
 export const aquaTransparent500 = "#0ff7";
 
+export const aquaMarine500 = "#00f0c0";
+
 export const purple500 = "#710dff";
 export const purple600 = "#a852ff";
 export const purple700 = "#B680FF";

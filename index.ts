@@ -176,6 +176,10 @@ const theme = {
         "support.class.component",
         "storage.type",
         "support.constant.property-value",
+        "variable.other.enummember",
+        "keyword.operator.logical",
+        "keyword.operator.type",
+        "entity.other.attribute-name.pseudo-element",
       ],
       settings: {
         foreground: colors.aqua600,
@@ -247,7 +251,7 @@ const theme = {
       },
     },
     {
-      scope: ["string.quoted"],
+      scope: ["string.quoted", "string.template"],
       settings: {
         foreground: colors.purple900,
         fontStyle: "",
