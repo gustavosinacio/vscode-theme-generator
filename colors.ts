@@ -3,7 +3,8 @@ export const aqua200 = "#044";
 export const aqua300 = "#067";
 export const aqua400 = "#09a";
 export const aqua500 = "#00f0ff";
-export const aqua700 = "#35E1FF";
+export const aqua600 = "#35E1FF";
+export const aqua700 = "#55e0ff";
 export const aqua800 = "#95e0ff";
 export const aqua900 = "#c0f0ff";
 export const aquaTransparent100 = "#0ff1";
@@ -15,6 +16,7 @@ export const purple500 = "#710dff";
 export const purple600 = "#a852ff";
 export const purple700 = "#B680FF";
 export const purple800 = "#C09AFE";
+export const purple900 = "#c0bbff";
 
 export const neonPink500 = "#f50072";
 export const neonPink700 = "#F52B7F";
@@ -22,17 +24,21 @@ export const neonPink800 = "#F53f7F";
 
 export const orange500 = "#ff5500";
 export const orange600 = "#FF703C";
+export const orange700 = "#FF804C";
+export const orange800 = "#FF905C";
 
 export const yellow500 = "#FFE50D";
 export const yellow700 = "#FFE38B";
 
 export const green300 = "#008855";
+export const green400 = "#20aa55";
 export const green500 = "#36F550";
 export const green600 = "#5fff7c";
 export const green700 = "#50FA7B";
 export const green800 = "#78FF81";
 
-export const blue500 = "#2100FF";
+export const blue400 = "#2100FF";
+export const blue500 = "#00a2ff";
 export const blue600 = "#00AFEB";
 export const blue700 = "#8AC5FB";
 

@@ -4,7 +4,7 @@ import config from "./config";
 
 const test = "#f00";
 
-const primary = colors.aqua700;
+const primary = colors.aqua600;
 const primaryDark = colors.aqua400;
 const primaryDarker = colors.aqua300;
 const primaryTransparent = colors.aquaTransparent300;
@@ -145,6 +145,7 @@ const theme = {
     // Editor widgets ----------------------------------------------------------
     "editorWidget.foreground": textColor,
     "editorWidget.background": backgroundAccentDark,
+    "editorGutter.addedBackground": colors.green400,
 
     // Editor Groups -----------------------------------------------------------
     "editorGroup.border": border,
@@ -152,6 +153,11 @@ const theme = {
     "editorGroupHeader.tabsBackground": background,
     "tab.activeBackground": backgroundAccent,
     "tab.inactiveBackground": background,
+
+    // Git ---------------------------------------------------------------------
+    "gitDecoration.untrackedResourceForeground": colors.green800,
+    "gitDecoration.modifiedResourceForeground": colors.aqua700,
+
     //
     //
     // -------------------------------------------------------------------------
@@ -166,9 +172,13 @@ const theme = {
 
   tokenColors: [
     {
-      scope: ["storage.type", "support.class.component", "storage.modifier"],
+      scope: [
+        "support.class.component",
+        "storage.type",
+        "support.constant.property-value",
+      ],
       settings: {
-        foreground: colors.aqua700,
+        foreground: colors.aqua600,
         fontStyle: "",
       },
     },
@@ -177,7 +187,6 @@ const theme = {
         "entity.name.tag",
         "entity.name.type",
         "keyword.control.import",
-        "keyword.operator.new",
         "keyword.control",
         "punctuation.support",
         "storage.modifier.async",
@@ -185,12 +194,10 @@ const theme = {
       ],
       settings: {
         foreground: colors.neonPink800,
-        fontStyle: "italic",
       },
     },
     {
       scope: [
-        "support.type.property-name",
         "entity.name.function",
         "meta.require",
         "support.function.any-method",
@@ -198,7 +205,17 @@ const theme = {
         "entity.other.attribute-name",
       ],
       settings: {
-        foreground: colors.green700,
+        foreground: colors.green500,
+        fontStyle: "",
+      },
+    },
+    {
+      scope: [
+        "support.type.property-name",
+        "support.type.vendored.property-name",
+      ],
+      settings: {
+        foreground: colors.green800,
         fontStyle: "",
       },
     },
@@ -221,6 +238,8 @@ const theme = {
         "variable.other.constant",
         "variable.other.readwrite",
         "variable.other.object",
+        "variable.parameter",
+        "entity.other.attribute-name.class",
       ],
       settings: {
         foreground: colors.purple600,
@@ -230,18 +249,40 @@ const theme = {
     {
       scope: ["string.quoted"],
       settings: {
-        foreground: colors.purple800,
+        foreground: colors.purple900,
+        fontStyle: "",
+      },
+    },
+    {
+      scope: ["variable.other.readwrite.alias", "meta.object-literal.key"],
+      settings: {
+        foreground: colors.white,
         fontStyle: "",
       },
     },
     {
       scope: [
-        "variable.other.readwrite.alias",
-        "variable.parameter",
-        "meta.object-literal.key",
+        "punctuation.definition.media",
+        "punctuation.definition.keyword",
+        "punctuation.definition.template-expression",
       ],
       settings: {
-        foreground: colors.white,
+        foreground: colors.blue500,
+        fontStyle: "",
+      },
+    },
+    {
+      scope: [
+        "keyword.operator.new",
+        "constant.numeric",
+        "punctuation.accessor.optional",
+        "storage.type.type",
+        "storage.type.interface",
+        "storage.modifier",
+        "variable.other.property",
+      ],
+      settings: {
+        foreground: colors.orange800,
         fontStyle: "",
       },
     },
