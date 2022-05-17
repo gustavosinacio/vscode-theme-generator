@@ -146,6 +146,17 @@ const theme = {
     "editorWidget.foreground": textColor,
     "editorWidget.background": backgroundAccentDark,
     "editorGutter.addedBackground": colors.green400,
+    "editor.tokenColorCustomizations": {
+      functions: "#f00",
+    },
+    "editor.semanticTokenColorCustomizations": {
+      enabled: true,
+      rules: {
+        number: "#ff0000",
+        typeParameter: "#ff0000",
+        operator: "#ff0000",
+      },
+    },
 
     // Editor Groups -----------------------------------------------------------
     "editorGroup.border": border,
@@ -180,6 +191,7 @@ const theme = {
         "keyword.operator.logical",
         "keyword.operator.type",
         "entity.other.attribute-name.pseudo-element",
+        "entity.name.section",
       ],
       settings: {
         foreground: colors.aqua600,
@@ -201,8 +213,14 @@ const theme = {
       },
     },
     {
+      scope: ["constant.language.boolean"],
+      settings: {
+        foreground: colors.neonPink800,
+        fontStyle: "italic",
+      },
+    },
+    {
       scope: [
-        "entity.name.function",
         "meta.require",
         "support.function.any-method",
         "variable.function",
@@ -214,9 +232,17 @@ const theme = {
       },
     },
     {
+      scope: ["entity.name.function"],
+      settings: {
+        foreground: colors.green700,
+        fontStyle: "",
+      },
+    },
+    {
       scope: [
         "support.type.property-name",
         "support.type.vendored.property-name",
+        "punctuation.definition.list",
       ],
       settings: {
         foreground: colors.green800,
@@ -244,6 +270,7 @@ const theme = {
         "variable.other.object",
         "variable.parameter",
         "entity.other.attribute-name.class",
+        "punctuation.definition.heading",
       ],
       settings: {
         foreground: colors.purple600,
@@ -251,14 +278,22 @@ const theme = {
       },
     },
     {
-      scope: ["string.quoted", "string.template"],
+      scope: [
+        "string.quoted",
+        "string.template",
+        "markup.list.unnumbered.markdown",
+      ],
       settings: {
         foreground: colors.purple900,
         fontStyle: "",
       },
     },
     {
-      scope: ["variable.other.readwrite.alias", "meta.object-literal.key"],
+      scope: [
+        "variable.other.readwrite.alias",
+        "meta.object-literal.key",
+        "keyword.operator.type.annotation",
+      ],
       settings: {
         foreground: colors.white,
         fontStyle: "",
@@ -269,6 +304,8 @@ const theme = {
         "punctuation.definition.media",
         "punctuation.definition.keyword",
         "punctuation.definition.template-expression",
+        "punctuation.section.embedded",
+        "markup.underline.link.markdown",
       ],
       settings: {
         foreground: colors.blue500,
@@ -284,13 +321,26 @@ const theme = {
         "storage.type.interface",
         "storage.modifier",
         "variable.other.property",
+        "variable.object.property",
+        "markup.inline.raw.string",
       ],
       settings: {
         foreground: colors.orange800,
         fontStyle: "",
       },
     },
+    {
+      scope: ["string.other.link.title.markdown"],
+      settings: {
+        foreground: colors.yellow500,
+        fontStyle: "italic",
+      },
+    },
   ],
+  semanticHighlighting: true,
+  semanticTokenColors: {
+    function: colors.green600,
+  },
 };
 
 const stringfiedTheme = JSON.stringify(theme);
