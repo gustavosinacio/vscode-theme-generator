@@ -146,17 +146,6 @@ const theme = {
     "editorWidget.foreground": textColor,
     "editorWidget.background": backgroundAccentDark,
     "editorGutter.addedBackground": colors.green400,
-    "editor.tokenColorCustomizations": {
-      functions: "#f00",
-    },
-    "editor.semanticTokenColorCustomizations": {
-      enabled: true,
-      rules: {
-        number: "#ff0000",
-        typeParameter: "#ff0000",
-        operator: "#ff0000",
-      },
-    },
 
     // Editor Groups -----------------------------------------------------------
     "editorGroup.border": border,
@@ -192,6 +181,7 @@ const theme = {
         "keyword.operator.type",
         "entity.other.attribute-name.pseudo-element",
         "entity.name.section",
+        "constant.language.import-export-all",
       ],
       settings: {
         foreground: colors.aqua600,
@@ -213,7 +203,7 @@ const theme = {
       },
     },
     {
-      scope: ["constant.language.boolean"],
+      scope: ["constant.language.boolean", "constant.language.json"],
       settings: {
         foreground: colors.neonPink800,
         fontStyle: "italic",
@@ -224,10 +214,16 @@ const theme = {
         "meta.require",
         "support.function.any-method",
         "variable.function",
-        "entity.other.attribute-name",
       ],
       settings: {
         foreground: colors.green500,
+        fontStyle: "",
+      },
+    },
+    {
+      scope: ["entity.other.attribute-name"],
+      settings: {
+        foreground: colors.aquaMarine500,
         fontStyle: "",
       },
     },
