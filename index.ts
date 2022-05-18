@@ -4,11 +4,11 @@ import config from "./config";
 
 const test = "#f00";
 
-const primary = colors.aqua600;
+const primary = colors.aqua500;
 const primaryDark = colors.aqua400;
 const primaryDarker = colors.aqua300;
 const primaryTransparent = colors.aquaTransparent300;
-const primaryTransparentDark = colors.aquaTransparent100;
+const primaryTransparentDark = colors.aquaTransparent200;
 
 const textColor = colors.white;
 
@@ -19,6 +19,17 @@ const backgroundAccentDark = colors.gray100;
 const backgroundAccent = colors.gray200;
 const backgroundAccentLighter = colors.gray300;
 
+/** VSCODE COLOR API REFERENCE:
+ * https://code.visualstudio.com/api/references/theme-color
+ *
+ *
+ * Side bar -- where the files are located
+ * List/tree view -- the files themselves
+ * Activity bar -- bar at the far left <--
+ * Status bar -- bar at the bottom
+ *
+ */
+
 const theme = {
   name: "Oled Neon Theme",
   colors: {
@@ -27,7 +38,7 @@ const theme = {
     contrastBorder: border,
 
     // Base colors  ------------------------------------------------------------
-    focusBorder: primary,
+    focusBorder: primaryDarker,
     foreground: colors.white,
     disabledForeground: colors.gray700,
     "widget.shadow": colors.aquaTransparent400,
@@ -97,7 +108,8 @@ const theme = {
     "list.activeSelectionBackground": primaryTransparent,
     "list.activeSelectionForeground": textColor,
     "list.dropBackground": primaryTransparent,
-    "list.focusOutline": primaryTransparent,
+    "list.focusOutline": primaryDark,
+    "list.focusBackground": primaryTransparent,
     "list.hoverBackground": primaryTransparent,
     "list.hoverForeground": textColor,
     "list.inactiveSelectionBackground": primaryTransparentDark,
@@ -116,7 +128,7 @@ const theme = {
     "activityBar.activeBackground": backgroundAccentDark,
     "activityBar.activeFocusBorder": primary,
 
-    // Activity Bar ------------------------------------------------------------
+    // Side Bar ----------------------------------------------------------------
     "sideBar.background": background,
     "sideBar.foreground": textColor,
     "sideBar.border": border,
@@ -184,7 +196,7 @@ const theme = {
         "constant.language.import-export-all",
       ],
       settings: {
-        foreground: colors.aqua600,
+        foreground: colors.aqua500,
         fontStyle: "",
       },
     },
@@ -228,10 +240,24 @@ const theme = {
       },
     },
     {
-      scope: ["entity.name.function"],
+      scope: ["entity.name.function", "punctuation.definition.bold.markdown"],
       settings: {
         foreground: colors.green700,
         fontStyle: "",
+      },
+    },
+    {
+      scope: ["markup.italic.markdown"],
+      settings: {
+        foreground: colors.green700,
+        fontStyle: "italic",
+      },
+    },
+    {
+      scope: ["markup.bold.markdown"],
+      settings: {
+        foreground: colors.green700,
+        fontStyle: "bold",
       },
     },
     {

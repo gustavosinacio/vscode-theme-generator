@@ -8,6 +8,7 @@ export const aqua700 = "#55e0ff";
 export const aqua800 = "#95e0ff";
 export const aqua900 = "#c0f0ff";
 export const aquaTransparent100 = "#0ff1";
+export const aquaTransparent200 = "#0ff2";
 export const aquaTransparent300 = "#0ff3";
 export const aquaTransparent400 = "#0ff5";
 export const aquaTransparent500 = "#0ff7";
