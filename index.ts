@@ -157,7 +157,6 @@ const theme = {
     // Editor widgets ----------------------------------------------------------
     "editorWidget.foreground": textColor,
     "editorWidget.background": backgroundAccentDark,
-    "editorGutter.addedBackground": colors.green400,
 
     // Editor Groups -----------------------------------------------------------
     "editorGroup.border": border,
@@ -174,9 +173,26 @@ const theme = {
     //
     // -------------------------------------------------------------------------
 
+    // Editor Colors -----------------------------------------------------------
     "editor.foreground": textColor,
     "editor.background": background,
+    "editorUnnecessaryCode.border": primaryDark,
     "editorLineNumber.activeForeground": primary,
+    "editorGutter.addedBackground": colors.green300,
+    "editorCodeLens.foreground": primary,
+
+    // Editor Brackets ---------------------------------------------------------
+    "editorBracketMatch.background": colors.gray300,
+    "editorBracketMatch.border": primary,
+
+    "editorBracketHighlight.foreground1": colors.orange700,
+    "editorBracketHighlight.foreground2": colors.blue500,
+    "editorBracketHighlight.foreground3": colors.yellow500,
+    "editorBracketHighlight.foreground4": colors.purple600,
+    "editorBracketHighlight.foreground5": colors.green700,
+
+    // "editorBracketPairGuide.activeBackground1": colors.red500,
+
     "statusBar.background": background,
     "sidePanel.background": background,
     "panel.background": background,
