@@ -76,7 +76,7 @@ const theme = {
 
     // Dropdown control --------------------------------------------------------
     "dropdown.background": backgroundAccent,
-    "dropdown.listBackground": test,
+    // "dropdown.listBackground": test,
     "dropdown.border": backgroundAccentLighter,
     "dropdown.foreground": textColor,
 
@@ -176,13 +176,14 @@ const theme = {
     // Editor Colors -----------------------------------------------------------
     "editor.foreground": textColor,
     "editor.background": background,
-    "editorUnnecessaryCode.border": primaryDark,
+    "editorUnnecessaryCode.border": colors.purple600aa,
+    "editorUnnecessaryCode.opacity": colors.purple600aa,
     "editorLineNumber.activeForeground": primary,
     "editorGutter.addedBackground": colors.green300,
     "editorCodeLens.foreground": primary,
 
     // Editor Brackets ---------------------------------------------------------
-    "editorBracketMatch.background": colors.gray300,
+    "editorBracketMatch.background": background,
     "editorBracketMatch.border": primary,
 
     "editorBracketHighlight.foreground1": colors.orange700,
