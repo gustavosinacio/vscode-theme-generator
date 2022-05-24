@@ -1,6 +1,7 @@
-import fs from "fs";
-import * as colors from "./colors";
 import config from "./config";
+
+import * as colors from "./colors";
+import { writeThemeFile } from "./functions";
 
 const test = "#f00";
 
@@ -191,6 +192,24 @@ const theme = {
     "editorBracketHighlight.foreground3": colors.yellow500,
     "editorBracketHighlight.foreground4": colors.purple600,
     "editorBracketHighlight.foreground5": colors.green700,
+
+    // Title Bar ---------------------------------------------------------------
+    "titleBar.activeBackground": background,
+    "titleBar.activeForeground": textColor,
+    "titleBar.inactiveBackground": background,
+    "titleBar.inactiveForeground": colors.gray600,
+    "titleBar.border": background,
+
+    "menubar.selectionForeground": primary,
+    "menubar.selectionBackground": background,
+    "menubar.selectionBorder": primary,
+    "menu.selectionForeground": primary,
+    "menu.selectionBackground": background,
+    "menu.selectionBorder": primaryDarker,
+    "menu.foreground": textColor,
+    "menu.background": background,
+    "menu.separatorBackground": primary,
+    "menu.border": background,
 
     // "editorBracketPairGuide.activeBackground1": colors.red500,
 
@@ -383,17 +402,6 @@ const theme = {
 };
 
 const stringfiedTheme = JSON.stringify(theme);
-
-function writeThemeFile(path: string, stringfiedThemeJSON: string) {
-  console.log(`Writing JSON file to ${path}`);
-
-  fs.writeFile(path, stringfiedThemeJSON, "utf8", function (error) {
-    if (error) {
-      console.log("An error occured while writing JSON Object to File.");
-      console.error(9821, error);
-    }
-  });
-}
 
 config.themePath.map((path) => writeThemeFile(path, stringfiedTheme));
 
